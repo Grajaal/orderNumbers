@@ -1,10 +1,16 @@
+function delay(n){
+    return new Promise(function(resolve){
+        setTimeout(resolve,n*1000);
+    });
+}
+
 function numeroAleatorio(){
 
     return Math.floor(Math.random() * 10 + 1);
 
 }
 
-function crearDivs(array, tam, padre){
+async function crearDivs(array, tam, padre){
 
     for(let i = 0; i < tam; i++){
 
@@ -15,6 +21,8 @@ function crearDivs(array, tam, padre){
         padre.appendChild(itemDiv);
 
         itemDiv.className = "subDiv";
+
+        await delay(1);
 
     }
 
@@ -84,5 +92,9 @@ const body = document.getElementById("body");
 body.appendChild(divOrdenado);
 console.log(divOrdenado);
 
-crearDivs(arrayNums, tam, divOrdenado);
+document.write("<br>");
+
+setTimeout(crearDivs, 5000);
+
+divOrdenado.className = "divsOrdenados";
 
