@@ -42,3 +42,41 @@ body{
     display: flex;
     justify-content: center;
 }
+
+#button{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    width: 40%;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+
+}
+
+#button span{
+    transition: .4s ease-in all;
+    position: absolute;
+    left: 30%;
+    top: 8px;
+}
+
+#button:hover span{
+    left: 10px;
+}
+
+#button .icono{
+    top: 8px;
+    position: absolute;
+    transition: .3s ease-in-out all;
+    left: 0;
+    opacity: 0;
+}
+
+#button:hover .icono{
+    left:90%;
+    opacity: 1;
+}
